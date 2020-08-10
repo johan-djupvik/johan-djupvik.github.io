@@ -80,10 +80,17 @@
           <p>2018-07-16</p>
           <figure>
             <picture>
-                <source srcset="/images/HamnensDag.jpg" media="(min-width: 800px)">
-                  <img src="/images/HamnensDag.jpg" alt="Folk som sitter och lyssnar på en man på Hamnens Dag" />
-              </picture>
-              <figcaption>Foto: Björn Hjernquist</figcaption>
+              <!-- Bilder i löpande text är i allmänhet begränsade till 300px bredd i min
+                design, förutom när skärmen är smalare än 580px, för då får de 100%
+                bredd. Därför har jag "*-300" versionen för breda skärmar, "*-474(eller
+                större)" versionen för skärmar mellan lite över 300px och 580px, och sedan
+                "*-300" versionen igen när skärmen är så smal att högre upplösning än
+                300px bredd inte gör någon nytta. -->
+              <source srcset="/images/HamnensDag-300.jpg" media="(min-width: 580px)"/>
+              <source srcset="/images/HamnensDag-474.jpg" media="(min-width: 340px)"/>
+              <img src="/images/HamnensDag-300.jpg" alt="Folk som sitter och lyssnar på en man på Hamnens Dag" />
+            </picture>
+            <figcaption>Foto: Björn Hjernquist</figcaption>
           </figure>
 
           <p>
