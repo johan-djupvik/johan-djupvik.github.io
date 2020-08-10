@@ -46,21 +46,15 @@
         <article>
           <h3>Kontaktformulär</h3>
           <form action="contact.html" method="POST">
-            <fieldset>
-              <legend>Ärende</legend>
-              <label>Rubrik <input type="text" name="topic"></label>
-              <label>Beskrivning <textarea name="message"></textarea></label>
-            </fieldset>
-            <fieldset>
-              <legend>Hur vill du bli kontaktad?</legend>
-              <select name="reply-method">
+            <label>Rubrik <input type="text" name="topic"></label>
+            <label>Beskrivning <textarea name="message"></textarea></label>
+            <label>Hur vill du bli kontaktad? <select name="reply-method">
                 <option value="email">Mail</option>
                 <option value="phone">Telefon</option>
                 <option value="none">Inte alls</option>
-              </select>
-              <label>Mailadress <input type="email" name="email"></label>
-              <label>Telefonnummer <input type="tel" name="phone"></label>
-            </fieldset>
+            </select></label>
+            <label>Mailadress <input type="email" name="email"></label>
+            <label>Telefonnummer <input type="tel" name="phone"></label>
             <button>Skicka</button>
           </form>
         </article>

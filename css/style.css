@@ -150,12 +150,6 @@ th, td {
     background-color: rgba(100%, 100%, 100%, 0.9);
 }
 
-fieldset {
-    padding: 0.4em 1em;
-    margin: 0.8em 0;
-    border: 2px solid;
-}
-
 input, textarea {
     box-sizing: border-box;
     width: 100%;
