@@ -1,0 +1,307 @@
+body {
+    font-family: "Fira Sans", "DejaVu Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.4;
+    display: grid;
+    grid-template-columns: auto 340px 720px 340px auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 2em;
+    background-image: url("/images/D-12.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    /* Trying to get `background-size: cover` to actually cover the whole
+       height of the screen in mobile firefox. Not sure this fix works
+       though. I don't know how to disable cache when reloading in
+       firefox mobile, so I don't know if the changes have
+       applied. Leaving it in for now. */
+    height: 100vh;
+    min-height: 100%;
+}
+
+p {
+    margin: 0.8em 0;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0%, 25%, 82%);
+}
+
+a:visited {
+    color: rgb(40%, 0%, 82%);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+    margin: 0.7em 0 0.5em 0;
+    font-family: "Lobster", serif;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.7rem; }
+h4 { font-size: 1.3rem; }
+
+header, nav {
+    grid-column: 2 / 5;
+}
+
+header {
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+header > p, section > p {
+    font-size: 1.1em;
+}
+
+nav {
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-self: start;
+}
+
+nav a {
+    font-size: 1.4em;
+    padding: 0.4em 0.6em;
+    margin: 0 0.8em;
+}
+
+main {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    text-align: justify;
+}
+
+main > section {
+    padding: 2em;
+    margin-bottom: 2em;
+}n
+
+main > section:last-child {
+    margin-bottom: 0;
+}
+
+main > section > h2, aside > h2 {
+    margin-top: 0;
+}
+
+/* In the `main` list of sections, alternate between dark section +
+   light subsection, and the inverse, to make things look a bit more
+   interesting. */
+
+/* Every odd section: light section & dark subsections */
+main > section:nth-child(odd) { background-color: rgba(100%, 100%, 100%, 0.7); }
+main > section:nth-child(odd) > article {
+    background-color: rgba(0%, 20%, 40%, 0.9);
+    color: white;
+}
+main > section:nth-child(odd) > article a, main > section:nth-child(even) > a, nav a, nav a:visited {
+    color: rgb(0%, 98%, 60%);
+}
+main > section:nth-child(odd) > article a:visited, main > section:nth-child(even) > a:visited {
+    color: rgb(72%, 94%, 0%);
+}
+
+/* Every even section: dark section & light subsection */
+main > section:nth-child(even), nav {
+    background-color: rgba(0%, 20%, 40%, 0.7);
+    color: white;
+}
+main > section:nth-child(even) > article {
+    background-color: rgba(100%, 100%, 100%, 0.9);
+    color: black;
+}
+
+aside {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    align-self: start;
+    font-size: 0.9rem;
+    text-align: justify;
+    padding: 1.4em;
+    background-color: rgba(0%, 40%, 20%, 0.7);
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.3em;
+    color: black;
+}
+
+th {
+    text-align: center;
+}
+
+th, td {
+    padding: 0.3em 0.5em;
+    background-color: rgba(100%, 100%, 100%, 0.9);
+}
+
+fieldset {
+    padding: 0.4em 1em;
+    margin: 0.8em 0;
+    border: 2px solid;
+}
+
+input, textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input, textarea, select { display: block; }
+
+select, label {
+    display: block;
+    margin: 0.6em 0;
+}
+
+article {
+    padding: 1em 1.6em;
+    margin-bottom: 2em;
+    overflow: auto;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+figcaption {
+    font-size: 0.8em;
+    padding-bottom: 0.4em;
+    text-align: center;
+}
+
+figure img, figure source {
+    width: 240px;
+}
+
+figure:nth-child(odd) { float: left; margin-right: 1em; }
+figure:nth-child(even) { float: right; margin-left: 1em; }
+
+footer {
+    grid-column: 1 / 6;
+    grid-row: 4 / 5;
+    font-size: 0.9em;
+    color: rgb(16%, 16%, 16%);
+    padding: 2em 4em;
+    background-color: rgba(100%, 100%, 100%, 0.9);
+}
+
+@media (max-width: 1560px) {
+    body {
+	grid-template-columns: 720px auto 300px;
+	font-size: 16px;
+    }
+    header, nav, footer { grid-column: 1 / 4; }
+    main { grid-column: 1 / 2; }
+    aside { grid-column: 3 / 4; }
+
+    nav a {
+	font-size: 1.35em;
+	padding: 0.35em 0.5em;
+    }
+}
+
+@media (max-width: 1100px) {
+    body {
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto auto auto;
+    }
+    header, nav, main, aside, footer { grid-column: 1 / 2; }
+    header { grid-row: 1 / 2; }
+    nav { grid-row: 2 / 3; }
+    main { grid-row: 3 / 4; }
+    aside { grid-row: 4 / 5; }
+    footer { grid-row: 5 / 6; }
+
+    nav, aside { align-self: stretch; }
+
+    nav a {
+	font-size: 1.3em;
+	padding: 0.35em 0.3em;
+    }
+}
+
+@media (max-width: 880px) {
+    body {
+	grid-template-columns: auto 300px;
+	grid-template-rows: auto auto auto auto;
+    }
+    header, main, footer { grid-column: 1 / 3; }
+    nav { grid-column: 1 / 2; }
+    aside { grid-column: 2 / 3; }
+
+    header { grid-row: 1 / 2; }
+    nav, aside { grid-row: 2 / 3; }
+    main { grid-row: 3 / 4; }
+    footer { grid-row: 4 / 5; }
+
+    nav {
+	grid-column: 1 / 2;
+    }
+
+    nav a {
+	font-size: 1.3em;
+	padding: 0.35em 0.3em;
+    }
+    nav {
+	flex-direction: column;
+    }
+
+    #members-table {
+	font-size: 0.9em;
+	border-spacing: 0.2em;
+    }
+    th, td { padding: 0.1em 0.2em; }
+}
+
+@media (max-width: 580px) {
+    body {
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto auto auto;
+	font-size: 14px;
+    }
+    header, nav, main, aside, footer { grid-column: 1 / 2; }
+    header { grid-row: 1 / 2; }
+    nav { grid-row: 2 / 3; }
+    main { grid-row: 3 / 4; }
+    aside { grid-row: 4 / 5; }
+    footer { grid-row: 5 / 6; }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.4rem; }
+    h4 { font-size: 1.1rem; }
+
+    main > section, aside { padding: 1.4em 0.8em; }
+
+    article {
+	padding: 0.5em 0.8em;
+	margin-bottom: 2em;
+    }
+
+    #members-table {
+	font-size: 0.8em;
+	border-spacing: 0.15em;
+    }
+    th, td { padding: 0.08em 0.16em; }
+
+    figure img, figure source {
+	width: 100%;
+    }
+    figure:nth-child(odd) { float: none; margin-right: 0; }
+    figure:nth-child(even) { float: none; margin-left: 0; }
+}

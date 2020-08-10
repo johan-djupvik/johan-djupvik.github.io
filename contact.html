@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kontakt | Djupviks hamn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" type="module"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Kontakt</h1>
+      <p>Djupviks hamn</p>
+    </header>
+
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="english.html">English</a>
+      <a href="guest.html">Gästplatser</a>
+      <a href="turism.html">Turism</a>
+      <a href="history.html">Historia</a>
+      <a href="members.html">Medlemmar</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Kontakta oss</h2>
+        <article>
+          <h3>Kontaktuppgifter</h3>
+          <p>Hamnfogde Bo Lautin, mobil 0707-920310</p>
+
+          <p>
+            Djupviks hamnförening
+            c/o Ekholm
+            Eksta Hägur 170
+            623 54 Klintehamn</p>
+        </article>
+        <article>
+          <h3>Kontaktformulär</h3>
+          <form action="contact.html" method="POST">
+            <fieldset>
+              <legend>Ärende</legend>
+              <label>Rubrik <input type="text" name="topic"></label>
+              <label>Beskrivning <textarea name="message"></textarea></label>
+            </fieldset>
+            <fieldset>
+              <legend>Hur vill du bli kontaktad?</legend>
+              <select name="reply-method">
+                <option value="email">Mail</option>
+                <option value="phone">Telefon</option>
+                <option value="none">Inte alls</option>
+              </select>
+              <label>Mailadress <input type="email" name="email"></label>
+              <label>Telefonnummer <input type="tel" name="phone"></label>
+            </fieldset>
+            <button>Skicka</button>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <aside id="weather">
+      <h2>Vädret</h2>
+      <p>SMHI-prognosen för temperaturen i Djupviks hamn de närmsta timmarna</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Tid</th>
+            <th>Lufttemperatur</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </aside>
+
+    <footer>
+      Copyright tillhör Djupvikshamn.se. Kontakta oss på vår mailaddress: <a href="mailto:info@djupvikshamn.se">info@djupvikshamn.se</a>.
+    </footer>
+  </body>
+</html>
