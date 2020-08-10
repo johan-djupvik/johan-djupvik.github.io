@@ -1,9 +1,9 @@
 body {
     font-family: "Fira Sans", "DejaVu Sans", sans-serif;
-    font-size: 17px;
+    font-size: 22px;
     line-height: 1.4;
     display: grid;
-    grid-template-columns: auto 340px 720px 340px auto;
+    grid-template-columns: auto 450px 1000px 450px auto;
     grid-template-rows: auto auto auto auto;
     grid-gap: 2em;
     background-image: url("/images/background-3840.jpg");
@@ -46,10 +46,10 @@ h1, h2, h3, h4 {
     font-family: "Lobster", serif;
 }
 
-h1 { font-size: 2.8rem; }
-h2 { font-size: 2.2rem; }
-h3 { font-size: 1.7rem; }
-h4 { font-size: 1.3rem; }
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.7em; }
+h4 { font-size: 1.3em; }
 
 header, nav {
     grid-column: 2 / 5;
@@ -127,7 +127,7 @@ aside {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
     align-self: start;
-    font-size: 0.9rem;
+    font-size: 0.9em;
     text-align: justify;
     padding: 1.4em;
     background-color: rgba(0%, 40%, 20%, 0.7);
@@ -194,7 +194,13 @@ footer {
     background-color: rgba(100%, 100%, 100%, 0.9);
 }
 
-@media (max-width: 2000px) { body { background-image: url("/images/background-1920.jpg"); } }
+@media (max-width: 2000px) {
+    body {
+	background-image: url("/images/background-1920.jpg");
+	font-size: 17px;
+	grid-template-columns: auto 340px 720px 340px auto;
+    }
+}
 
 @media (max-width: 1560px) {
     body {
@@ -279,10 +285,10 @@ footer {
     aside { grid-row: 4 / 5; }
     footer { grid-row: 5 / 6; }
 
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.8rem; }
-    h3 { font-size: 1.4rem; }
-    h4 { font-size: 1.1rem; }
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.4em; }
+    h4 { font-size: 1.1em; }
 
     main > section, aside { padding: 1.4em 0.8em; }
 
